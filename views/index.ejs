@@ -1,4 +1,4 @@
-<% include header>
+<% include header %>
 <% if(enteries.length) { %>
     <% enteries.forEach((entry) => { %>
         <div class="panel panel-default">
@@ -12,9 +12,9 @@
                     <% =entry.body %>
                 </div>
         </div>
-        <% }) %>
-        <% } %>
-        <% else { %>
-            No enteries! <a href="/new-entry">Add one!</a>
-            <% } %>
-            <% include footer % >
+    <% }) %>
+<% } %>
+<% else { %>
+    No enteries! <a href="/new-entry">Add one!</a>
+<% } %>
+<% include footer %>
