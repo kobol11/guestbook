@@ -19,13 +19,13 @@ app.get('/', (req, res, next)=>{
 });
 app.get('/new-entry', (req, res) => res.render("new-entry"));
 app.post("/new-entry", (req, res)=>{
-    if(!req.body.title || !req.body.body){
+    if(!req.body.title || !req.body.content){
         res.status(400).send("Enteries must have a title and a body");
         return;
     }
     enteries.push({
         title: req.body.title,
-        content: req.body.body,
+        content: req.body.content,
         publication: new Date()
     });
     res.redirect("/");
