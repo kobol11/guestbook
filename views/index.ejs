@@ -4,17 +4,17 @@
         <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="text-muted pull-right">
-                        <% = entry.published %>
+                        <%= entry.published %>
                     </div>
-                    <% = entry.title %>
+                    <%= entry.title %>
                 </div>
                 <div class="panel-body">
-                    <% =entry.body %>
+                    <%= entry.content %>
                 </div>
         </div>
     <% }) %>
-<% } %>
-<% else { %>
+
+<%} else { %>
     No enteries! <a href="/new-entry">Add one!</a>
 <% } %>
 <% include footer %>
